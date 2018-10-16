@@ -9,4 +9,4 @@ install:
   - docker pull harvestcore/ipcontainer-test-python:pytestpython
   - docker images
 script: 
-  - docker run -d harvestcore/ipcontainer-test-mysql:ipctmysql && docker run -d harvestcore/ipcontainer-test-python:ipctpython
+  - docker run -d harvestcore/ipcontainer-test-mysql:ipctmysql && docker run -d harvestcore/ipcontainer-test-python:pytestpython
