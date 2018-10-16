@@ -6,7 +6,7 @@ install:
   - git clone https://github.com/harvestcore/IPContainer
   - cp ipcontainer-test/config.json IPContainer/src/
   - docker pull harvestcore/ipcontainer-test-mysql:ipctmysql
-  - docker pull harvestcore/ipcontainer-test-python:ipctpython
+  - docker pull harvestcore/ipcontainer-test-python:pytestpython
   - docker images
 script: 
   - docker run -d harvestcore/ipcontainer-test-mysql:ipctmysql && docker run -d harvestcore/ipcontainer-test-python:ipctpython
