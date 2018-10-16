@@ -2,7 +2,9 @@ services:
   - docker
 
 install:
-  - docker pull harvestcore/ipcontainer-test
+  - git clone https://github.com/harvestcore/ipcontainer
+  - docker pull harvestcore/ipcontainer-test-mysql
+  - docker pull harvestcore/ipcontainer-test-python
   - docker images
 script: 
-- docker run -t -v  $TRAVIS_BUILD_DIR:/test jjmerelo/iv-test
+  - docker run -d harvestcore/ipcontainer-test-mysql:ipctmysql && docker run -d harvestcore/ipcontainer-test-python:ipctpython
