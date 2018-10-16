@@ -13,4 +13,4 @@ script:
   - docker ps
   - docker images
   - sleep 20
-  - docker run pytestpython:ipctpython cd ./IPContainer && pytest
+  - docker run -w /IPContainer pytestpython:ipctpython pytest
