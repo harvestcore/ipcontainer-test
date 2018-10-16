@@ -10,4 +10,4 @@ install:
   - docker build -t pytestpython:ipctpython ./ipcontainer-test/python
   - docker images
 script: 
-  - docker run harvestcore/ipcontainer-test-mysql:ipctmysql && docker run pytestpython:ipctpython cd ./IPContainer && pytest
+  - docker run -d harvestcore/ipcontainer-test-mysql:ipctmysql && sleep 20 && docker run pytestpython:ipctpython cd ./IPContainer && pytest
